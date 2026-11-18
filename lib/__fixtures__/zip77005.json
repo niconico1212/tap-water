@@ -1,0 +1,938 @@
+{
+ "TX1010013": {
+  "boundary": "System Sourced",
+  "connections": 990181,
+  "contact": {
+   "city": "Houston",
+   "phone": "832-393-1000"
+  },
+  "counties": [
+   "Harris"
+  ],
+  "lead_copper": [
+   {
+    "copper_mgl": null,
+    "end": "2024-06-30",
+    "lead_ppb": 5.0,
+    "start": "2024-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2023-12-31",
+    "lead_ppb": 3.0,
+    "start": "2023-07-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2022-06-30",
+    "lead_ppb": 0,
+    "start": "2022-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2021-12-31",
+    "lead_ppb": 3.4,
+    "start": "2021-07-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2019-12-31",
+    "lead_ppb": 4.01,
+    "start": "2017-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2016-12-31",
+    "lead_ppb": 4.0,
+    "start": "2016-01-01"
+   }
+  ],
+  "lithium": {
+   "detections": 69,
+   "max_ugl": 33.9,
+   "reporting_limit_ugl": 9.0,
+   "samples": 96
+  },
+  "name": "CITY OF HOUSTON",
+  "owner": "Local government",
+  "pfas": {
+   "chemicals": [
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 10.0,
+     "name": "HFPO-DA",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 5.0,
+     "samples": 96
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 10.0,
+     "name": "PFHxS",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 3.0,
+     "samples": 96
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 10.0,
+     "name": "PFNA",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 4.0,
+     "samples": 96
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 4.0,
+     "name": "PFOA",
+     "proposed_rescission": false,
+     "reporting_limit_ppt": 4.0,
+     "samples": 96
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 4.0,
+     "name": "PFOS",
+     "proposed_rescission": false,
+     "reporting_limit_ppt": 4.0,
+     "samples": 96
+    },
+    {
+     "detections": 16,
+     "max_location_avg_ppt": 2.8,
+     "max_ppt": 5.1,
+     "name": "PFHxA",
+     "reporting_limit_ppt": 3.0,
+     "samples": 96
+    },
+    {
+     "detections": 11,
+     "max_location_avg_ppt": 2.83,
+     "max_ppt": 6.7,
+     "name": "PFPeA",
+     "reporting_limit_ppt": 3.0,
+     "samples": 96
+    },
+    {
+     "detections": 10,
+     "max_location_avg_ppt": 10.65,
+     "max_ppt": 42.6,
+     "name": "6:2 FTS",
+     "reporting_limit_ppt": 5.0,
+     "samples": 96
+    },
+    {
+     "detections": 9,
+     "max_location_avg_ppt": 3.35,
+     "max_ppt": 10.6,
+     "name": "PFBA",
+     "reporting_limit_ppt": 5.0,
+     "samples": 96
+    }
+   ],
+   "first_sample": "2023-02-06",
+   "last_sample": "2025-02-21",
+   "max_hazard_index": 0.0,
+   "sampled": true
+  },
+  "population": 2970543,
+  "pwsid": "TX1010013",
+  "source": {
+   "code": "SW",
+   "label": "Surface water"
+  },
+  "state": "TX",
+  "violation_counts": {
+   "health_based": 4,
+   "listed_since": "2021-11-18",
+   "open": 0,
+   "total": 9
+  },
+  "violations": [
+   {
+    "begin": "2025-05-01",
+    "category": "TT",
+    "contaminant": "Interim Enhanced Surface Water Treatment Rule",
+    "end": "2025-05-31",
+    "enforcement": {
+     "action": "State Compliance achieved",
+     "category": "Resolving",
+     "date": "2025-07-01"
+    },
+    "health_based": true,
+    "id": "2768",
+    "resolved_on": "2025-05-31",
+    "rule": "Interim and Long Term 1 Enhanced Surface Water Treatment Rule",
+    "status": "Resolved",
+    "type": "Single Turbidity Exceed (Enhanced SWTR)"
+   }
+  ],
+  "wholesaler": true,
+  "zips": [
+   "77002",
+   "77003",
+   "77004",
+   "77005",
+   "77006",
+   "77007",
+   "77008",
+   "77009",
+   "77010",
+   "77011",
+   "77012",
+   "77013",
+   "77014",
+   "77015",
+   "77016",
+   "77017",
+   "77018",
+   "77019",
+   "77020",
+   "77021",
+   "77022",
+   "77023",
+   "77024",
+   "77025",
+   "77026",
+   "77027",
+   "77028",
+   "77029",
+   "77030",
+   "77031",
+   "77032",
+   "77033",
+   "77034",
+   "77035",
+   "77036",
+   "77037",
+   "77038",
+   "77040",
+   "77041",
+   "77042",
+   "77043",
+   "77044",
+   "77045",
+   "77046",
+   "77047",
+   "77048",
+   "77049",
+   "77050",
+   "77051",
+   "77053",
+   "77054",
+   "77055",
+   "77056",
+   "77057",
+   "77058",
+   "77059",
+   "77060",
+   "77061",
+   "77062",
+   "77063",
+   "77064",
+   "77067",
+   "77070",
+   "77071",
+   "77072",
+   "77073",
+   "77074",
+   "77075",
+   "77076",
+   "77077",
+   "77078",
+   "77079",
+   "77080",
+   "77081",
+   "77082",
+   "77083",
+   "77084",
+   "77085",
+   "77086",
+   "77087",
+   "77088",
+   "77089",
+   "77090",
+   "77091",
+   "77092",
+   "77093",
+   "77094",
+   "77096",
+   "77098",
+   "77099",
+   "77204",
+   "77336",
+   "77338",
+   "77339",
+   "77345",
+   "77346",
+   "77365",
+   "77386",
+   "77396",
+   "77401",
+   "77407",
+   "77450",
+   "77477",
+   "77489",
+   "77498",
+   "77503",
+   "77504",
+   "77506",
+   "77520",
+   "77530",
+   "77532",
+   "77536",
+   "77546",
+   "77547",
+   "77571",
+   "77587",
+   "77598"
+  ]
+ },
+ "TX1010027": {
+  "boundary": "System Sourced",
+  "connections": 6400,
+  "contact": {
+   "city": "West University Place",
+   "phone": "713-668-4441"
+  },
+  "counties": [
+   "Harris"
+  ],
+  "lead_copper": [
+   {
+    "copper_mgl": null,
+    "end": "2026-12-31",
+    "lead_ppb": 0,
+    "start": "2026-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2025-12-31",
+    "lead_ppb": 2.9,
+    "start": "2023-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2022-06-30",
+    "lead_ppb": 4.0,
+    "start": "2022-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2021-12-31",
+    "lead_ppb": 4.0,
+    "start": "2021-07-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2018-12-31",
+    "lead_ppb": 0,
+    "start": "2018-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2017-12-31",
+    "lead_ppb": 0,
+    "start": "2017-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2016-12-31",
+    "lead_ppb": 2.0,
+    "start": "2014-01-01"
+   }
+  ],
+  "lithium": {
+   "detections": 5,
+   "max_ugl": 17.9,
+   "reporting_limit_ugl": 9.0,
+   "samples": 8
+  },
+  "name": "CITY OF WEST UNIVERSITY PLACE",
+  "owner": "Local government",
+  "pfas": {
+   "chemicals": [
+    {
+     "detections": 5,
+     "max_location_avg_ppt": 3.73,
+     "max_ppt": 5.4,
+     "mcl_ppt": 4.0,
+     "name": "PFOS",
+     "proposed_rescission": false,
+     "reporting_limit_ppt": 4.0,
+     "samples": 8
+    },
+    {
+     "detections": 4,
+     "max_location_avg_ppt": 1.82,
+     "max_ppt": 3.9,
+     "mcl_ppt": 10.0,
+     "name": "PFHxS",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 3.0,
+     "samples": 8
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 10.0,
+     "name": "HFPO-DA",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 5.0,
+     "samples": 8
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 10.0,
+     "name": "PFNA",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 4.0,
+     "samples": 8
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 4.0,
+     "name": "PFOA",
+     "proposed_rescission": false,
+     "reporting_limit_ppt": 4.0,
+     "samples": 8
+    },
+    {
+     "detections": 5,
+     "max_location_avg_ppt": 6.6,
+     "max_ppt": 10.3,
+     "name": "PFBA",
+     "reporting_limit_ppt": 5.0,
+     "samples": 8
+    },
+    {
+     "detections": 5,
+     "max_location_avg_ppt": 5.28,
+     "max_ppt": 8.5,
+     "name": "PFHxA",
+     "reporting_limit_ppt": 3.0,
+     "samples": 8
+    },
+    {
+     "detections": 5,
+     "max_location_avg_ppt": 5.48,
+     "max_ppt": 8.8,
+     "name": "PFPeA",
+     "reporting_limit_ppt": 3.0,
+     "samples": 8
+    },
+    {
+     "detections": 3,
+     "max_location_avg_ppt": 2.4,
+     "max_ppt": 5.1,
+     "name": "PFBS",
+     "reporting_limit_ppt": 3.0,
+     "samples": 8
+    }
+   ],
+   "first_sample": "2023-02-21",
+   "last_sample": "2024-09-17",
+   "max_hazard_index": 0.393,
+   "sampled": true
+  },
+  "population": 19200,
+  "pwsid": "TX1010027",
+  "source": {
+   "code": "SWP",
+   "label": "Surface water purchased"
+  },
+  "state": "TX",
+  "violation_counts": {
+   "health_based": 2,
+   "listed_since": "2021-11-18",
+   "open": 2,
+   "total": 27
+  },
+  "violations": [
+   {
+    "begin": "2025-07-02",
+    "category": "RPT",
+    "contaminant": "LEAD AND COPPER RULE REVISIONS",
+    "end": "2026-06-16",
+    "enforcement": {
+     "action": "State Compliance achieved",
+     "category": "Resolving",
+     "date": "2026-06-16"
+    },
+    "health_based": false,
+    "id": "249",
+    "resolved_on": "2026-06-16",
+    "status": "Resolved",
+    "type": "Notification, Known or Potential LSL"
+   },
+   {
+    "begin": "2024-02-14",
+    "category": "MR",
+    "contaminant": "E. COLI",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2025-01-10"
+    },
+    "health_based": false,
+    "id": "246",
+    "rule": "Ground Water Rule",
+    "status": "Unaddressed",
+    "type": "Monitoring, Source Water (GWR)"
+   },
+   {
+    "begin": "2019-09-13",
+    "category": "Other",
+    "contaminant": "Public Notice",
+    "enforcement": {
+     "action": "State Violation/Reminder Notice",
+     "category": "Informal",
+     "date": "2019-10-10"
+    },
+    "health_based": false,
+    "id": "241",
+    "rule": "Public Notice Rule and Revised PN Rule",
+    "status": "Unaddressed",
+    "type": "Public Notification Violation for NPDWR Violation"
+   }
+  ],
+  "wholesaler": false,
+  "zips": [
+   "77005",
+   "77025"
+  ]
+ },
+ "TX1010908": {
+  "boundary": "System Sourced",
+  "connections": 75,
+  "contact": {
+   "city": "Houston",
+   "phone": "713-348-5050"
+  },
+  "counties": [
+   "Harris"
+  ],
+  "lead_copper": [
+   {
+    "copper_mgl": null,
+    "end": "2026-06-30",
+    "lead_ppb": 2.35,
+    "start": "2026-01-01"
+   },
+   {
+    "copper_mgl": 1.52,
+    "end": "2025-12-31",
+    "lead_ppb": 20.1,
+    "start": "2023-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2022-12-31",
+    "lead_ppb": 5.0,
+    "start": "2022-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2021-12-31",
+    "lead_ppb": 6.9,
+    "start": "2019-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2018-12-31",
+    "lead_ppb": 2.5,
+    "start": "2018-01-01"
+   },
+   {
+    "copper_mgl": null,
+    "end": "2017-12-31",
+    "lead_ppb": 8.8,
+    "start": "2015-01-01"
+   }
+  ],
+  "lithium": {
+   "detections": 5,
+   "max_ugl": 22.8,
+   "reporting_limit_ugl": 9.0,
+   "samples": 8
+  },
+  "name": "RICE UNIVERSITY",
+  "owner": "Private",
+  "pfas": {
+   "chemicals": [
+    {
+     "detections": 2,
+     "max_location_avg_ppt": 1.62,
+     "max_ppt": 3.5,
+     "mcl_ppt": 10.0,
+     "name": "PFHxS",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 3.0,
+     "samples": 8
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 10.0,
+     "name": "HFPO-DA",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 5.0,
+     "samples": 8
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 10.0,
+     "name": "PFNA",
+     "proposed_rescission": true,
+     "reporting_limit_ppt": 4.0,
+     "samples": 8
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 4.0,
+     "name": "PFOA",
+     "proposed_rescission": false,
+     "reporting_limit_ppt": 4.0,
+     "samples": 8
+    },
+    {
+     "detections": 0,
+     "max_location_avg_ppt": 0.0,
+     "max_ppt": 0.0,
+     "mcl_ppt": 4.0,
+     "name": "PFOS",
+     "proposed_rescission": false,
+     "reporting_limit_ppt": 4.0,
+     "samples": 8
+    },
+    {
+     "detections": 3,
+     "max_location_avg_ppt": 11.15,
+     "max_ppt": 28.0,
+     "name": "PFBA",
+     "reporting_limit_ppt": 5.0,
+     "samples": 8
+    },
+    {
+     "detections": 3,
+     "max_location_avg_ppt": 4.17,
+     "max_ppt": 6.4,
+     "name": "PFHxA",
+     "reporting_limit_ppt": 3.0,
+     "samples": 8
+    },
+    {
+     "detections": 3,
+     "max_location_avg_ppt": 4.42,
+     "max_ppt": 6.9,
+     "name": "PFPeA",
+     "reporting_limit_ppt": 3.0,
+     "samples": 8
+    },
+    {
+     "detections": 2,
+     "max_location_avg_ppt": 1.7,
+     "max_ppt": 3.7,
+     "name": "PFBS",
+     "reporting_limit_ppt": 3.0,
+     "samples": 8
+    }
+   ],
+   "first_sample": "2023-03-20",
+   "last_sample": "2024-06-05",
+   "max_hazard_index": 0.352,
+   "sampled": true
+  },
+  "population": 8415,
+  "pwsid": "TX1010908",
+  "source": {
+   "code": "SWP",
+   "label": "Surface water purchased"
+  },
+  "state": "TX",
+  "violation_counts": {
+   "health_based": 4,
+   "listed_since": "2021-11-18",
+   "open": 0,
+   "total": 24
+  },
+  "violations": [
+   {
+    "begin": "2026-04-01",
+    "category": "MON",
+    "contaminant": "Revised Total Coliform Rule",
+    "end": "2026-04-30",
+    "enforcement": {
+     "action": "State Compliance achieved",
+     "category": "Resolving",
+     "date": "2026-06-04"
+    },
+    "health_based": false,
+    "id": "44",
+    "resolved_on": "2026-04-30",
+    "status": "Resolved",
+    "type": "Monitoring, Routine (RTCR)"
+   },
+   {
+    "begin": "2026-04-01",
+    "category": "TT",
+    "contaminant": "Lead and Copper Rule",
+    "end": "2026-05-22",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2026-05-27"
+    },
+    "health_based": true,
+    "id": "43",
+    "resolved_on": "2026-05-22",
+    "status": "Resolved",
+    "type": "OCCT/SOWT Study/Recommendation"
+   },
+   {
+    "begin": "2026-03-31",
+    "category": "TT",
+    "contaminant": "Lead and Copper Rule",
+    "end": "2026-05-22",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2026-05-27"
+    },
+    "health_based": true,
+    "id": "42",
+    "resolved_on": "2026-05-22",
+    "status": "Resolved",
+    "type": "OCCT/SOWT Study/Recommendation"
+   },
+   {
+    "begin": "2026-01-01",
+    "category": "MR",
+    "contaminant": "Lead and Copper Rule",
+    "end": "2026-06-30",
+    "health_based": false,
+    "id": "45",
+    "resolved_on": "2026-06-30",
+    "status": "Archived",
+    "type": "Water Quality Parameter M/R"
+   },
+   {
+    "begin": "2025-12-01",
+    "category": "MON",
+    "contaminant": "Revised Total Coliform Rule",
+    "end": "2025-12-31",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2026-03-13"
+    },
+    "health_based": false,
+    "id": "41",
+    "resolved_on": "2025-12-31",
+    "status": "Resolved",
+    "type": "Monitoring, Routine (RTCR)"
+   },
+   {
+    "begin": "2025-11-01",
+    "category": "MCL",
+    "contaminant": "Revised Total Coliform Rule",
+    "end": "2025-11-30",
+    "enforcement": {
+     "action": "State Compliance achieved",
+     "category": "Resolving",
+     "date": "2026-02-17"
+    },
+    "health_based": true,
+    "id": "40",
+    "resolved_on": "2025-11-30",
+    "status": "Resolved",
+    "type": "Maximum Contaminant Level Violation, E. coli (RTCR)"
+   },
+   {
+    "begin": "2024-10-17",
+    "category": "RPT",
+    "contaminant": "LEAD AND COPPER RULE REVISIONS",
+    "end": "2025-04-11",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2025-04-17"
+    },
+    "health_based": false,
+    "id": "37",
+    "resolved_on": "2025-04-11",
+    "status": "Resolved",
+    "type": "LSL Reporting"
+   },
+   {
+    "begin": "2024-10-17",
+    "category": "TT",
+    "contaminant": "LEAD AND COPPER RULE REVISIONS",
+    "end": "2025-04-11",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2025-04-17"
+    },
+    "health_based": true,
+    "id": "36",
+    "resolved_on": "2025-04-11",
+    "status": "Resolved",
+    "type": "LSL Inventory"
+   },
+   {
+    "begin": "2023-10-01",
+    "category": "MR",
+    "contaminant": "Total Haloacetic Acids (HAA5)",
+    "end": "2023-12-31",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2024-05-15"
+    },
+    "health_based": false,
+    "id": "35",
+    "resolved_on": "2023-12-31",
+    "rule": "Stage 2 Disinfectants and Disinfection Byproducts Rule",
+    "status": "Resolved",
+    "type": "Monitoring and Reporting (DBP)"
+   },
+   {
+    "begin": "2023-10-01",
+    "category": "MR",
+    "contaminant": "TTHM",
+    "end": "2023-12-31",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2024-05-15"
+    },
+    "health_based": false,
+    "id": "34",
+    "resolved_on": "2023-12-31",
+    "rule": "Stage 2 Disinfectants and Disinfection Byproducts Rule",
+    "status": "Resolved",
+    "type": "Monitoring and Reporting (DBP)"
+   },
+   {
+    "begin": "2023-06-09",
+    "category": "Other",
+    "contaminant": "Public Notice",
+    "end": "2023-07-24",
+    "enforcement": {
+     "action": "State Compliance achieved",
+     "category": "Resolving",
+     "date": "2023-07-24"
+    },
+    "health_based": false,
+    "id": "32",
+    "resolved_on": "2023-07-24",
+    "rule": "Public Notice Rule and Revised PN Rule",
+    "status": "Resolved",
+    "type": "Public Notification Violation for NPDWR Violation"
+   },
+   {
+    "begin": "2022-01-01",
+    "category": "MR",
+    "contaminant": "Total Haloacetic Acids (HAA5)",
+    "end": "2022-03-31",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2023-08-01"
+    },
+    "health_based": false,
+    "id": "30",
+    "resolved_on": "2022-03-31",
+    "rule": "Stage 2 Disinfectants and Disinfection Byproducts Rule",
+    "status": "Archived",
+    "type": "Monitoring and Reporting (DBP)"
+   },
+   {
+    "begin": "2022-01-01",
+    "category": "MR",
+    "contaminant": "TTHM",
+    "end": "2022-03-31",
+    "enforcement": {
+     "action": "State Public Notification received",
+     "category": "Informal",
+     "date": "2023-08-01"
+    },
+    "health_based": false,
+    "id": "29",
+    "resolved_on": "2022-03-31",
+    "rule": "Stage 2 Disinfectants and Disinfection Byproducts Rule",
+    "status": "Archived",
+    "type": "Monitoring and Reporting (DBP)"
+   }
+  ],
+  "wholesaler": false,
+  "zips": [
+   "77005"
+  ]
+ },
+ "TX1010023": {
+  "boundary": "System Sourced",
+  "connections": 819,
+  "contact": {
+   "city": "Houston",
+   "phone": "713-668-2341"
+  },
+  "counties": [
+   "Harris"
+  ],
+  "lead_copper": [
+   {
+    "copper_mgl": null,
+    "end": "2023-12-31",
+    "lead_ppb": 0,
+    "start": "2021-01-01"
+   }
+  ],
+  "lithium": null,
+  "name": "CITY OF SOUTHSIDE PLACE",
+  "owner": "Local government",
+  "pfas": {
+   "sampled": false
+  },
+  "population": 2457,
+  "pwsid": "TX1010023",
+  "source": {
+   "code": "SWP",
+   "label": "Surface water purchased"
+  },
+  "state": "TX",
+  "violation_counts": {
+   "health_based": 1,
+   "listed_since": "2021-11-18",
+   "open": 0,
+   "total": 36
+  },
+  "violations": [],
+  "wholesaler": false,
+  "zips": [
+   "77005",
+   "77025"
+  ]
+ }
+}
