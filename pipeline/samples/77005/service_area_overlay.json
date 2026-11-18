@@ -1,0 +1,34 @@
+{
+ "zcta": "77005",
+ "method": "TIGERweb 2020 ZCTA polygon intersected with EPA Water_System_Boundaries layer 0",
+ "matches": [
+  {
+   "PWSID": "TX1010027",
+   "PWS_Name": "CITY OF WEST UNIVERSITY PLACE",
+   "Population_Served_Count": 19200,
+   "Area_SqKM": 5.117,
+   "Symbology_Field": "System Sourced"
+  },
+  {
+   "PWSID": "TX1010908",
+   "PWS_Name": "RICE UNIVERSITY",
+   "Population_Served_Count": 8415,
+   "Area_SqKM": 1.159,
+   "Symbology_Field": "System Sourced"
+  },
+  {
+   "PWSID": "TX1010023",
+   "PWS_Name": "CITY OF SOUTHSIDE PLACE",
+   "Population_Served_Count": 2457,
+   "Area_SqKM": 0.616,
+   "Symbology_Field": "System Sourced"
+  },
+  {
+   "PWSID": "TX1010013",
+   "PWS_Name": "CITY OF HOUSTON",
+   "Population_Served_Count": 2202531,
+   "Area_SqKM": 1479.129,
+   "Symbology_Field": "System Sourced"
+  }
+ ]
+}
