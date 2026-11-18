@@ -45,6 +45,10 @@ export interface Grade {
   deductions: Deduction[];
   /** Things that did not change the score but that a reader should know. */
   notes: string[];
+  /** Violation counts behind the score (before caps). */
+  counts: { health: number; monitoring: number; open: number };
+  /** Start of the look-back window, YYYY-MM-DD. */
+  since: string;
 }
 
 export function letterFor(score: number): string {
@@ -189,7 +193,12 @@ export function gradeSystem(system: WaterSystem, asOf: Date = new Date()): Grade
   }
 
   const score = Math.max(0, 100 - deductions.reduce((sum, d) => sum + d.points, 0));
-  return { score, letter: letterFor(score), deductions, notes };
+  const counts = {
+    health: recent.filter((v) => v.health_based).length,
+    monitoring: paperwork.length,
+    open: system.violations.filter(isOpen).length,
+  };
+  return { score, letter: letterFor(score), deductions, notes, counts, since };
 }
 
 function pfasDeduction(c: PfasChemical): Deduction | null {

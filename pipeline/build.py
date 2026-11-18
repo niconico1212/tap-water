@@ -9,14 +9,18 @@ Output (all under public/data):
     zips/770.json       every ZIP starting 770 -> the systems that serve it
     systems/TX101.json  full records for every system whose PWSID starts TX101
     states/TX.json      one-line summary of every system in the state
+    cities/TX.json      city slug -> its main system and ZIPs
+    top-cities.json     the 500 largest cities, for pre-rendering
     meta.json           build date, source dates, counts
 """
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import time
+import unicodedata
 import zipfile
 from collections import defaultdict
 from datetime import date, datetime, timezone
@@ -32,6 +36,13 @@ SYSTEM_SHARD = 5  # PWSID prefix length: state + first three digits
 def write(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(obj, separators=(",", ":"), sort_keys=True, ensure_ascii=False))
+
+
+def slugify(text: str) -> str:
+    """Must match slugify() in lib/text.ts."""
+    text = unicodedata.normalize("NFKD", text.lower())
+    text = re.sub(r"[^\w\s-]", "", text, flags=re.ASCII).strip()
+    return re.sub(r"[\s_]+", "-", text)
 
 
 def zip_member_date(name: str, member_prefix: str) -> str | None:
@@ -103,6 +114,40 @@ def main() -> None:
     for st, recs in by_state.items():
         write(OUT / "states" / f"{st}.json", sorted(recs, key=lambda r: (-r["population"], r["pwsid"])))
 
+    # Cities: every place name with at least one mapped system. A city's system is
+    # the one covering the most of its ZIPs. top-cities.json lists the biggest for
+    # pre-rendering (one city per system, so suburbs don't crowd it out).
+    tally = defaultdict(lambda: defaultdict(float))
+    city_zips = defaultdict(list)
+    for z, rec in zips.items():
+        if not rec["city"] or not rec["state"]:
+            continue
+        key = (rec["city"], rec["state"])
+        for e in rec["systems"]:
+            if e["match"] == "boundary":
+                tally[key][e["pwsid"]] += e["share"]
+            elif e["match"] == "reported":
+                tally[key][e["pwsid"]] += 0.01
+        city_zips[key].append(z)
+    cities = defaultdict(dict)
+    for (city, state), scores in tally.items():
+        pwsid = max(scores, key=lambda p: (round(scores[p], 3), systems[p]["population"], p))
+        slug = slugify(city) + "-" + state.lower()
+        cities[state][slug] = {"slug": slug, "city": city, "state": state, "pwsid": pwsid,
+                               "zips": sorted(city_zips[(city, state)]),
+                               "population": systems[pwsid]["population"]}
+    shutil.rmtree(OUT / "cities", ignore_errors=True)
+    for st, recs in cities.items():
+        write(OUT / "cities" / f"{st}.json", recs)
+    best = {}
+    for recs in cities.values():
+        for c in recs.values():
+            cur = best.get(c["pwsid"])
+            if not cur or (len(c["zips"]), c["slug"]) > (len(cur["zips"]), cur["slug"]):
+                best[c["pwsid"]] = c
+    top = sorted(best.values(), key=lambda c: (-c["population"], c["slug"]))[:500]
+    write(OUT / "top-cities.json", [{k: c[k] for k in ("slug", "city", "state", "pwsid", "population")} for c in top])
+
     matches = defaultdict(int)
     for rec in zips.values():
         matches[rec["systems"][0]["match"] if rec["systems"] else "none"] += 1
@@ -116,6 +161,7 @@ def main() -> None:
         },
         "counts": {
             "systems": len(systems),
+            "cities": sum(len(c) for c in cities.values()),
             "systems_with_boundary": sum(bool(s["boundary"]) for s in systems.values()),
             "systems_with_pfas_data": sum(s["pfas"]["sampled"] for s in systems.values()),
             "zips": len(zips),

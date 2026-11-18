@@ -23,6 +23,8 @@ Raw downloads (about 1.2 GB) are kept in `pipeline/.cache` and reused on the nex
 | `public/data/zips/770.json` | Every ZIP starting `770`, each with its city, state and the systems that serve it |
 | `public/data/systems/TX101.json` | Full records for every system whose PWSID starts `TX101` |
 | `public/data/states/TX.json` | One-line summary of each system in the state, largest first |
+| `public/data/cities/TX.json` | City slug (`houston-tx`) → its main system and ZIPs |
+| `public/data/top-cities.json` | The 500 largest cities, one per system, for pre-rendering |
 | `public/data/meta.json` | Build time, source dates, counts |
 
 To look up a ZIP: read `zips/<first 3 digits>.json`, take the entry, then read `systems/<first 5 chars of PWSID>.json` for each system.
