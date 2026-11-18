@@ -49,11 +49,14 @@ def overlay(systems: dict[str, dict]) -> dict[str, list[dict]]:
 
     # Equal-area projection so shares are comparable everywhere, including AK/HI/PR.
     areas = areas.to_crs(6933)
-    areas["geometry"] = shapely.make_valid(areas.geometry.values)
+    # buffer(0) repairs self-intersections and drops stray lines/points.
+    areas["geometry"] = areas.geometry.buffer(0)
+    areas = areas[~areas.geometry.is_empty]
     areas = areas.dissolve(by="PWSID").reset_index()[["PWSID", "geometry"]]
     areas["sys_area"] = areas.geometry.area
 
     zcta = gpd.read_file(f"zip://{CACHE / 'zcta.zip'}", columns=["ZCTA5CE20"]).to_crs(6933)
+    zcta["geometry"] = zcta.geometry.buffer(0)
     zcta["zip_area"] = zcta.geometry.area
 
     pairs = gpd.sjoin(zcta, areas[["PWSID", "geometry"]], predicate="intersects")

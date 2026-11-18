@@ -39,7 +39,7 @@ To look up a ZIP: read `zips/<first 3 digits>.json`, take the entry, then read `
 
 ### System record
 
-- `violations` — each violation once, newest first, limited to the last 10 years plus anything still open. `status` is `Resolved`, `Archived`, `Addressed` (formal enforcement under way) or `Unaddressed`.
+- `violations` — each violation once, newest first, limited to the last 5 years plus anything still open. Empty fields are omitted. `category` is `MCL`, `MRDL`, `TT` (treatment technique), `MON`, `RPT`, `MR` or `Other`. `status` is `Resolved`, `Archived`, `Addressed` (formal enforcement under way) or `Unaddressed`.
 - `violation_counts` — all-time totals.
 - `lead_copper` — 90th percentile per sampling period. Lead in ppb (action level 15), copper in mg/L (action level 1.3).
 - `pfas.sampled` — `false` means the system was not part of UCMR 5, which is different from "nothing found".

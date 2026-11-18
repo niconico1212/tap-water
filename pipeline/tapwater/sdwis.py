@@ -40,8 +40,10 @@ def num(s: str) -> float | None:
 
 def system_state(pwsid: str, mailing_state: str) -> str:
     """State PWSIDs start with the postal code. Tribal and EPA-run systems start
-    with a region number, so fall back to the mailing address state."""
-    return pwsid[:2] if pwsid[:2].isalpha() else (mailing_state or "").upper()
+    with a region number or "NN" (Navajo Nation), so fall back to the mailing address state."""
+    from .geo import STATE_FIPS
+
+    return pwsid[:2] if pwsid[:2] in STATE_FIPS else (mailing_state or "").upper()
 
 
 def load_ref() -> dict[tuple[str, str], str]:
@@ -102,7 +104,7 @@ def load_geography(systems: dict[str, dict]):
     return zips, counties
 
 
-def load_violations(systems: dict[str, dict], ref, today: date, years: int = 10) -> None:
+def load_violations(systems: dict[str, dict], ref, today: date, years: int = 5) -> None:
     """Fill system['violations'] (recent or still open, newest first) and
     system['violation_counts'] (all-time).
 
@@ -144,16 +146,16 @@ def load_violations(systems: dict[str, dict], ref, today: date, years: int = 10)
             "status": status,
             "health_based": health,
             "category": cat,
-            "category_label": ref.get(("VIOLATION_CATEGORY_CODE", cat), cat),
             "type": ref.get(("VIOLATION_CODE", vcode), vcode),
             "contaminant": ref.get(("CONTAMINANT_CODE", ccode), ccode) or None,
             "rule": ref.get(("RULE_CODE", r[i["RULE_CODE"]])),
-            "public_notice_tier": int(num(r[i["PUBLIC_NOTIFICATION_TIER"]]) or 0) or None,
             "enforcement": _enforcement(i, r, ref, enf_date) if enf_date else None,
         }
     by_system = defaultdict(list)
     for v in kept.values():
-        by_system[v.pop("pwsid")].append(v)
+        if v["rule"] and v["contaminant"] and v["rule"].lower() == v["contaminant"].lower():
+            v["rule"] = None  # SDWIS often repeats the rule name as the contaminant
+        by_system[v.pop("pwsid")].append({k: x for k, x in v.items() if x is not None})
     for pwsid, s in systems.items():
         vs = sorted(by_system.get(pwsid, ()), key=lambda v: (v["begin"] or "", v["id"]), reverse=True)
         s["violations"] = vs
